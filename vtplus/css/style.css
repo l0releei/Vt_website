@@ -1,0 +1,453 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing:border-box;
+}
+/*-------------*/
+body{
+	background-color: #e6e7ed;
+	min-height: 100%;
+}
+
+header{
+	background-color: rgba(0,0,0,1);
+	font-family: Arial Narrow, Arial, Helvetica;
+}
+
+.page{
+	display: grid;
+	grid-template-areas: 
+							"header header"
+							"sidebar content"
+							"footer footer";
+	grid-gap: 30px;
+	grid-template-columns: 350px 1fr;
+	grid-template-rows: auto 1fr auto;
+}
+
+.header{
+	grid-area: header;
+}
+
+.headgrid{
+	display: grid;
+	grid-template-columns: 200px 1fr 200px;
+}
+
+.loggo{
+	overflow: hidden;
+	padding: 5px 0 0 45px;
+	transition: all 0.2s ease;
+}
+
+.example-image{
+	width: 50px;
+	height: 50px;
+	border-radius: 30%;
+}
+
+.example-man{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.button-man{
+	border-radius: 50%;
+}
+
+.profile{
+	padding: 5px 0 0 5px;
+	transition: all 0.2s ease;
+}
+
+.sidebar{
+	background-color: #fff;
+	grid-area: sidebar;
+	margin-left: 30px;
+	align-self: start;
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.1);
+	height: 800px;
+}
+
+.sidebar > div{
+	margin-bottom: 20px;
+}
+
+.kpi-block{
+	height: 190px;
+	border-bottom: 1px solid black;
+}
+
+.kpi-image{
+	width: 190px;
+	height: 190px;
+}
+
+.calendar{
+	display: inline-block;
+	width: 275px;
+	height: 300px;
+	border: 1px solid black;
+	box-shadow: 0px 6px 10px  rgba(0, 0, 0, 0.4);
+	font-family: "Quicksand", sans-serif;
+	background-color: black;
+}
+
+.month{
+	max-width: 300px;
+	max-height: 120px;
+	background-color: #167e56;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 2rem;
+	text-align: center;
+	text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.month i{
+	font-size: 2.5rem;
+	cursor: pointer;
+}
+
+.month h1{
+	font-size: 25px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+}
+
+.month p{
+	font-size: 25px;
+}
+
+.weekdays{
+	width: 100%;
+	height: 20px;
+	padding: 0 0.4rem;
+	color:white;
+	display: flex;
+	align-items: center;
+}
+
+.weekdays div{
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 0.1rem;
+	width: calc(270px / 7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days{
+	width: 275px;
+	display: flex;
+	color: white;
+	flex-wrap: wrap;
+	padding: 0.3rem;
+}
+
+.days div{
+	font-size: 15px;
+	margin: 0 3px 9px 0.3rem;
+	width: calc(200px / 7);
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+	transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today){
+	background-color: #262626;
+	border: 0.2rem solid #777;
+	cursor: pointer;
+}
+
+.prev-date, .next-date{
+	opacity: 0.5;
+}
+
+.today{
+	background-color: #167e56;
+}
+
+.news{
+	display: inline-block;
+	width: 275px;
+	height: 250px;
+	border: 1px solid black;
+	box-shadow: 0px 6px 10px  rgba(0, 0, 0, 0.4);
+	position: relative;
+}
+
+.news > div > img{
+	width: 273px;
+	height: 248px;
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: 50px;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+.prev{
+	left: 0;
+	border-radius: 3px 0 0 3px;
+}
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+
+ /*Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+.content{
+	background-color: #fff;
+	grid-area: content;
+	width: auto;
+	margin-left: 30px;
+	margin-right: 410px;
+	min-height: calc(100vh - 10px);
+	border: none;
+	padding: 70px 60px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.1);
+}
+
+.footer{
+	grid-area: footer;
+	color: #fff;
+	background: rgba(0,0,0,1);
+	font-family: Arial Narrow, Arial, Helvetica;
+}
+
+.brand{
+	width: 75%;
+}
+
+.footer h2{
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.footer p{
+	opacity: 0.6;
+}
+
+.footer a{
+	color: white;
+	text-decoration: none;
+	opacity: 0.6;
+	text-transform: capitalize;
+}
+
+.footer a:hover{
+	opacity: 1;
+}
+
+.footer li{
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.accounts{
+	margin-top: 0px;
+}
+
+.footer i{
+	margin-right: 20px;
+	font-size: 20px;
+}
+
+
+.dws-menu *{
+	margin: 0;
+	padding: 0;
+
+}
+
+.dws-menu ul,
+.dws-menu ol{
+	list-style: none;
+}
+
+.dws-menu > ul{
+	display: flex;
+	justify-content: center;
+}
+
+.dws-menu > ul li{
+	position: relative;
+	border-right: 2px solid rgba(0,0,0,1);
+}
+
+.dws-menu > ul li:first-child{
+	border-left: 2px solid rgba(0,0,0,1);
+}
+
+.dws-menu > ul li:last-child{
+	border-right: 2px solid rgba(0,0,0,1);
+}
+
+.dws-menu > ul li a{
+	display: block;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45484d+7,000000+60 */
+	background: rgb(69,72,77); /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 7%, rgba(0,0,0,1) 60%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 7%,rgba(0,0,0,1) 60%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  rgba(69,72,77,1) 7%,rgba(0,0,0,1) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	padding: 20px 20px 20px 20px;
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+	text-transform:uppercase;
+	transition: all 0.2s ease;
+}
+
+.dws-menu h2{
+	font-size: 18px;
+}
+
+.dws-menu li a:hover{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0e1e5+0,454547+2,454547+98,e0e1e5+100 */
+	background: rgb(224,225,229); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(224,225,229,1) 0%, rgba(69,69,71,1) 2%, rgba(69,69,71,1) 98%, rgba(224,225,229,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(224,225,229,1) 0%,rgba(69,69,71,1) 2%,rgba(69,69,71,1) 98%,rgba(224,225,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(224,225,229,1) 0%,rgba(69,69,71,1) 2%,rgba(69,69,71,1) 98%,rgba(224,225,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e1e5', endColorstr='#e0e1e5',GradientType=0 ); /* IE6-9 */
+	color: #fff;
+	box-shadow: 1px 5px 10px -5px #fff;
+	transition: all 0.2s ease;
+}
+
+/*sub menu*/
+.dws-menu li ul{
+	position: absolute;
+	min-width: 200px;
+	display: none;
+}
+
+.dws-menu li > ul li{
+	border: 1px solid #fff;
+}
+
+.dws-menu li > ul li a{
+	padding: 10px;
+	text-transform: none;
+	background: rgba(0,0,0,1);
+}
+
+.dws-menu li > ul li ul{
+	position: absolute;
+	right: -200px;
+	top: 0;
+}
+
+.dws-menu li > ul li ul li {
+	position: relative;
+	top: 0;
+}
+
+.dws-menu li:hover > ul{
+	display: block;
+}
+
+.foot p{
+	color: #fff;
+}
+
+.foot{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	padding: 3rem;
+}
+
+.icons img{
+	width: 37px;
+	height: 37px;
+	border-radius: 50%;
+}
+
+.lefting{
+	float: left;
+	margin: 0 30px 10px 0;
+	border-radius: 20px;
+}
+
+.content h2{
+	font-size: 50px;
+}
+
+.content h3 span{
+	margin: 0 70px 0 0;
+}
+
+.team{
+	border-radius: 50%;
+	text-align: center;
+}
+
+.content span:first-child{
+	margin: 100px;
+}

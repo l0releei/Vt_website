@@ -1,0 +1,25 @@
+@startuml
+skinparam ArchimateBackgroundColor #ffffff
+skinparam	shadowing false
+skinparam Note {
+	BackgroundColor #B43434
+	FontColor #ffffff
+}
+
+
+|User| 
+start
+
+: Натискає на будь-яку кнопку у тулл-барі сайту;
+
+|#Gray|Система|
+
+: Надає інформацію обранної теми;
+: Або пропонує підрозділи обранної теми;
+
+|User| 
+
+: Отримує доступ до шуканої інформації;
+
+stop;
+@enduml

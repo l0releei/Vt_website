@@ -9,9 +9,10 @@
 # Учасники та контактна інформація
 |**Name**|**Gmail**|**Telegram**|
 |-------------------|-------------------------------|-----------|
-|*Карнаухова Анастасія*|anastasiz.bbq@gmail.com|https://t.me/YummySatan|
-|*Педенко Данило*|pedenko.danil@gmail.com|https://t.me/ChoogaBM|
 |*Гладков Даніїл*| gladkovdaniil.kpi.io92@gmail.com|https://t.me/skarsgardd|
+|*Педенко Данило*|pedenko.danil@gmail.com|https://t.me/ChoogaBM|
+|*Карнаухова Анастасія*|anastasiz.bbq@gmail.com|https://t.me/YummySatan|
 
 
-[Звітність]()
+
+[Звітність](https://github.com/l0releei/Vt_website/edit/main/doc/Documentation.md)

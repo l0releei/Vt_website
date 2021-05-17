@@ -1,0 +1,15 @@
+@startuml
+actor User #Gray
+
+  
+  usecase "<b>US_1.1</b>\nRegistration" as US_1
+  usecase "<b>US_1.2</b>\nLog-in" as US_2
+  usecase "<b>US_1.3</b>\nView Information" as US_3
+  usecase "<b>US_1.4</b>\nTelegram Group" as US_4
+  
+ 
+  User -u-> US_1
+  User -l-> US_2
+  User -r-> US_3
+  User -d-> US_4
+@enduml

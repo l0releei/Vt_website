@@ -15,4 +15,4 @@
 
 
 
-[Звітність](https://github.com/l0releei/Vt_website/edit/main/doc/Documentation.md)
+[Звітність](https://github.com/l0releei/Vt_website/blob/main/doc/Documentation.md)

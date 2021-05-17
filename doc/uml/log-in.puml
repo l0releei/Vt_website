@@ -1,0 +1,31 @@
+@startuml
+skinparam ArchimateBackgroundColor #ffffff
+skinparam	shadowing false
+skinparam Note {
+	BackgroundColor #B43434
+	FontColor #ffffff
+}
+
+
+|User| 
+start
+
+: Натискає на кнопку забраження у правому вверхньому кутку;
+
+|#Gray|Система|
+
+: Пропонує форму для входу : логін, пароль.;
+
+|User| 
+
+: Заповнює поля;
+
+|#Gray|Система|
+: Провіряє введені дані та дозволяє вхід, якщо вони вірні;
+
+|User| 
+
+: Входить у систему;
+
+stop;
+@enduml

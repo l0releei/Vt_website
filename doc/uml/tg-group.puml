@@ -1,0 +1,34 @@
+@startuml
+skinparam ArchimateBackgroundColor #ffffff
+skinparam	shadowing false
+skinparam Note {
+	BackgroundColor #B43434
+	FontColor #ffffff
+}
+
+
+|User| 
+start
+
+: Натискає на зотраження "Vt+ Chat" на сайд-барі;
+
+|#Gray|Система|
+
+: Обробляє запит;
+: Переносить користувача за адресою <https://t.me/joinchat/...>;
+
+|User| 
+
+: Натискаяє на кнопку "JOIN GROUP";
+
+|#Gray|Система|
+
+: Переносить користувача у телеграмм;
+
+
+|User| 
+: Переходить до телеграмм группи;
+
+
+stop;
+@enduml

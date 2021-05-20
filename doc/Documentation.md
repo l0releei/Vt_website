@@ -203,6 +203,18 @@ PHP — мова, у код якої можна вбудовувати безп�
 `uploads` - папка, яка зберігає фотографії хареєстрованних кристувачів<br/>
 `vstup` - папка з `html` файлами сторінок розділу "Вступ"<br/>
 
+### Головне сторінка сайту
+![image](https://github.com/l0releei/Vt_website/blob/main/doc/img/screen_1.PNG)
+
+### Вхід в аккаунт
+![image](https://github.com/l0releei/Vt_website/blob/main/doc/img/screen_2.PNG)
+
+### Профіль аккаунта
+![image](https://github.com/l0releei/Vt_website/blob/main/doc/img/screen_3.PNG)
+
+### Реєстрація аккаунта 
+![image](https://github.com/l0releei/Vt_website/blob/main/doc/img/screen_4.PNG)
+
 
 <a name="висновок"> </a>
 # Висновок 

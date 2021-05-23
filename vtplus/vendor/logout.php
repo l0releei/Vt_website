@@ -1,4 +1,15 @@
 <?php
 session_start();
-unset($_SESSION['user']);
-header('Location: ../index.php');
+class Logout{
+
+    /**
+     *
+     */
+    function clear(){
+        unset($_SESSION['user']);
+        header('Location: ../index.php');
+    }
+}
+
+$LOGOUT = new Logout();
+$LOGOUT -> clear();

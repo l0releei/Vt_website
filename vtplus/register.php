@@ -1,8 +1,14 @@
 <?php
-    session_start();
-    if ($_SESSION['user']) {
-        header('Location: profile.php');
+session_start();
+class Register{
+    function check(){
+        if ($_SESSION['user']) {
+            header('Location: profile.php');
+        }
     }
+}
+$REGISTER = new Register();
+$REGISTER -> check();
 ?>
 
 <!doctype html>

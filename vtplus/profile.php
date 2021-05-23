@@ -1,8 +1,17 @@
 <?php
 session_start();
-if (!$_SESSION['user']) {
-    header('Location: /');
+class Start_from_main{
+    /**
+     *
+     */
+    function backer(){
+        if (!$_SESSION['user']) {
+            header('Location: index.php');
+        }
+    }
 }
+$START = new Start_from_main;
+$START -> backer();
 ?>
 
 <!doctype html>

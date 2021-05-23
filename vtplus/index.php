@@ -1,9 +1,17 @@
 <?php
 session_start();
-
-if ($_SESSION['user']) {
-    header('Location: profile.php');
+class Profile{
+    /**
+     *
+     */
+    function go_to_profile(){
+        if ($_SESSION['user']) {
+            header('Location: profile.php');
+        }
+    }
 }
+$PROFILE = new Profile();
+$PROFILE -> go_to_profile();
 
 ?>
 
